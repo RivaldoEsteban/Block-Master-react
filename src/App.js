@@ -5,11 +5,12 @@ import Main from "./components/main/main-index";
 import React, { useState } from "react";
 function App() {
   const [container, setContainer] = useState();
+  const [filter, setFilter] = useState("allMovies");
   return (
     <div className="wrapper">
-      <Header container={container} />
+      <Header setFilter={setFilter} />
       <Hero />
-      <Main setContainer={setContainer} />
+      <Main setContainer={setContainer} filter={filter} />
     </div>
   );
 }
