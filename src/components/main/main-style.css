@@ -1,0 +1,62 @@
+.main {
+  margin-bottom: 100px;
+}
+
+.title-section {
+  margin: 0 0 48px 0;
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.movie {
+  width: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.movie img {
+  border-radius: 10px;
+}
+
+.movie:hover button {
+  border: 2px solid blue;
+}
+
+.movie h1 {
+  margin: 0 0 1rem 0;
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 2px solid #fed941;
+  border-top: 2px solid #fed941;
+  padding: 13px 1.5rem;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: rgba(0, 0, 0, 0.64);
+  color: white;
+  position: absolute;
+  bottom: 240px;
+  left: -2px;
+}
+
+.movie button img {
+  width: 21px;
+  height: 21px;
+}
+
+.movie button p {
+  margin: 0;
+  font: 700 normal 28px/35px var(--fontFamily);
+}

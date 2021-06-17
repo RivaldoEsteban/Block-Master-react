@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 1.5rem 0;
+}
+
+.list-a {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+}
+
+.list-a li a {
+  color: white;
+  text-decoration: none;
+}
+
+.list-a li {
+  padding-bottom: 3px;
+}
+
+.list-a li:hover a {
+  color: #fed941;
+  border-bottom: 1px solid #fed941;
+}
+
+.form {
+  flex: 1;
+  position: relative;
+  height: 44px;
+}
+
+.form input {
+  width: 100%;
+  box-sizing: border-box;
+  height: inherit;
+  padding: 0 72px 0 1rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #fed941;
+  height: inherit;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.form button img {
+  width: 1.5rem;
+  padding: 10px 1.2rem;
+}
