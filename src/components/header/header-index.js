@@ -1,35 +1,44 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./header-style.css";
-import moviesData from "../../movies-data";
-import Movie from "../movie/movie";
-import MovieContainer from "../movie/movie-container";
+function Header({ setFilter, setInput }) {
+  const inputValue = useRef(null);
 
-function Header({ setFilter }) {
   function allMovies() {
     setFilter("allMovies");
-    // console.log(moviesData);
-    // const movieContainer = container.current;
-    // movieContainer. = moviesData.map((movie, id) => {
-    //   return <Movie movie={movie} id={id} />;
-    // });
   }
 
   function mostValued() {
     setFilter("mostValued");
-    // moviesData.map((movie) => {
-    //   if (movie.vote_average > 7) {
-    //     console.log(movie);
-    //   }
-    // });
   }
 
   function leastValued() {
     setFilter("leastValued");
-    // moviesData.map((movie) => {
-    //   if (movie.vote_average < 7) {
-    //     console.log(movie);
-    //   }
-    // });
+  }
+
+  function search() {
+    setFilter("searchName");
+    setInput(inputValue);
+    // const movieContainer = container.current;
+    // movieContainer.innerHTML = data
+    //   .filter((movie) => {
+    //     if (
+    //       movie.title.toLowerCase() == inputValue.current.value.toLowerCase()
+    //     ) {
+    //       return true;
+    //     }
+    //   })
+    //   .map((movie, id) => {
+    //     return `
+    //       <div className="movie" id=${id}>
+    //         <h1 className="movie-title">${movie.title}</h1>
+    //         <img src=${movie.poster_path} alt="" className="movie-image" />
+    //         </div>
+    //         `;
+    //   });
+    // <button>
+    //   <img src="images/icons/star.png" alt="icon star" />
+    //   <p>${movie.vote_average}</p>
+    // </button>
   }
   return (
     <header className="header">
@@ -45,8 +54,13 @@ function Header({ setFilter }) {
           <a href="#">Menos valoradas</a>
         </li>
       </ul>
-      <form className="form" id="form" aria-label="formulario-header">
-        <input type="text" />
+      <form
+        className="form"
+        id="form"
+        aria-label="formulario-header"
+        onSubmit={search}
+      >
+        <input type="text" ref={inputValue} />
         <button type="submit" role="button">
           <img src="images/icons/search.png" alt="icon search" />
         </button>

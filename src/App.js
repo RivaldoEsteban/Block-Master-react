@@ -3,14 +3,32 @@ import Header from "./components/header/header-index";
 import Hero from "./components/hero/hero-index";
 import Main from "./components/main/main-index";
 import React, { useState } from "react";
+import moviesData from "./movies-data";
+import WatchMovie from "./components/movie/presentationMovie";
+
 function App() {
+  const [data, setData] = useState(moviesData);
   const [container, setContainer] = useState();
   const [filter, setFilter] = useState("allMovies");
+  const [input, setInput] = useState();
+
   return (
     <div className="wrapper">
-      <Header setFilter={setFilter} />
+      <Header
+        setFilter={setFilter}
+        container={container}
+        data={data}
+        setInput={setInput}
+      />
       <Hero />
-      <Main setContainer={setContainer} filter={filter} />
+      <Main
+        filter={filter}
+        setContainer={setContainer}
+        data={data}
+        setFilter={setFilter}
+        input={input}
+      />
+      {/* <WatchMovie /> */}
     </div>
   );
 }
