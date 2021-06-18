@@ -18,6 +18,7 @@ function Header({ setFilter, setInput }) {
   function search() {
     setFilter("searchName");
     setInput(inputValue);
+
     // const movieContainer = container.current;
     // movieContainer.innerHTML = data
     //   .filter((movie) => {
@@ -62,7 +63,7 @@ function Header({ setFilter, setInput }) {
       >
         <input type="text" ref={inputValue} />
         <button type="submit" role="button">
-          <img src="images/icons/search.png" alt="icon search" />
+          <img src="../../../public/images/icons/star.png" />
         </button>
       </form>
     </header>
