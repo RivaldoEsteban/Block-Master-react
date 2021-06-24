@@ -63,7 +63,7 @@ function Header({ setFilter, setInput }) {
       >
         <input type="text" ref={inputValue} />
         <button type="submit" role="button">
-          <img src="../../../public/images/icons/star.png" />
+          <img src="./public/images/icons/star.png" />
         </button>
       </form>
     </header>
