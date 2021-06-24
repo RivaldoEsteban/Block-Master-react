@@ -1,44 +1,66 @@
-import React, { useEffect } from "react";
+import React, { useRef } from "react";
 import "./hero-style.css";
 
 function Hero() {
-  useEffect(() => {
-    const img1 = document.getElementById("img1");
-    const img2 = document.getElementById("img2");
-    const img3 = document.getElementById("img3");
-    const imageHero = document.getElementById("imageHero");
+  const image = useRef(null);
+  const button1 = useRef(null);
+  const button2 = useRef(null);
+  const button3 = useRef(null);
 
-    function changeImage(nameImage, id) {
-      imageHero.src = `images/${nameImage}.png`;
-      const circle = document.getElementById(`img${id}`);
-      circleDisabled();
-      circle.classList.add("active");
-    }
+  function circleDisabled() {
+    button1.current.classList.remove("active");
+    button2.current.classList.remove("active");
+    button3.current.classList.remove("active");
+  }
+  function removeClass() {
+    image.current.classList.remove("hero-img");
+    image.current.classList.remove("mulan");
+    image.current.classList.remove("raya");
+    image.current.classList.remove("unidos");
+  }
 
-    function circleDisabled() {
-      img1.classList.remove("active");
-      img2.classList.remove("active");
-      img3.classList.remove("active");
-    }
+  function mulan() {
+    image.current.src = `images/mulan.png`;
+    removeClass();
+    image.current.classList.add("mulan");
+    circleDisabled();
+    button1.current.classList.add("active");
+  }
 
-    img1.addEventListener("click", () => {
-      changeImage("mulan", "1");
-    });
-    img2.addEventListener("click", () => {
-      changeImage("raya", "2");
-    });
-    img3.addEventListener("click", () => {
-      changeImage("unidos", "3");
-    });
-  }, []);
+  function raya() {
+    image.current.src = `images/raya.png`;
+    removeClass();
+    image.current.classList.add("raya");
+    circleDisabled();
+    button2.current.classList.add("active");
+  }
+
+  function unidos() {
+    image.current.src = `images/unidos.png`;
+    removeClass();
+    image.current.classList.add("unidos");
+    circleDisabled();
+    button3.current.classList.add("active");
+  }
 
   return (
     <div className="hero" aria-label="hero">
-      <img src="images/mulan.png" id="imageHero" alt="image mulan hero" />
+      <img
+        src="images/mulan.png"
+        className="mulan"
+        id="imageHero"
+        alt="image mulan hero"
+        ref={image}
+      />
       <div className="slider-circle">
-        <div className="circle active" id="img1"></div>
-        <div className="circle" id="img2"></div>
-        <div className="circle" id="img3"></div>
+        <div
+          className="circle active"
+          id="img1"
+          onClick={mulan}
+          ref={button1}
+        ></div>
+        <div className="circle" id="img2" onClick={raya} ref={button2}></div>
+        <div className="circle" id="img3" onClick={unidos} ref={button3}></div>
       </div>
     </div>
   );
