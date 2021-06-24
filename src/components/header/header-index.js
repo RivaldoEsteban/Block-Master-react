@@ -43,7 +43,7 @@ function Header({ setFilter, setInput }) {
   }
   return (
     <header className="header">
-      <img src="images/logo.png" alt="" />
+      <img src="./images/logo.png" alt="logo de la página" />
       <ul className="list-a">
         <li id="allMovies" onClick={allMovies}>
           <a href="#">Todas</a>
@@ -63,7 +63,7 @@ function Header({ setFilter, setInput }) {
       >
         <input type="text" ref={inputValue} />
         <button type="submit" role="button">
-          <img src="./public/images/icons/star.png" />
+          <img src="./images/icons/search.png" alt="icono del buscador" />
         </button>
       </form>
     </header>
