@@ -14,13 +14,13 @@ function Main({ data, input }) {
       <h1 className="title-section">Todas las películas</h1>
       <section className="movies" id="movies-container">
         <Switch>
-          <Route path="/Block-Master-react/allMovies" exact>
+          <Route path="/" exact>
             <AllMovies data={data} />
           </Route>
-          <Route path="/Block-Master-react/leastValued" exact>
+          <Route path="/leastValued" exact>
             <LeastValued data={data} />
           </Route>
-          <Route path="/Block-Master-react/mostValued" exact>
+          <Route path="/mostValued" exact>
             <MostVlued data={data} />
           </Route>
         </Switch>
