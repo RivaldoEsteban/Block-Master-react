@@ -15,7 +15,7 @@ function Header({ setInput }) {
     <header className="header">
       <img src="./images/logo.png" alt="logo de la página" />
       <ul className="list-a">
-        <Link to="/Block-Master-react">
+        <Link to="/Block-Master-react/">
           <li id="allMovies">
             <a href="#">Todas</a>
           </li>
