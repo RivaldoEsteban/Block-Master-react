@@ -5,6 +5,7 @@ import Main from "./components/main/main-index";
 import React, { useState } from "react";
 import moviesData from "./movies-data";
 import WatchMovie from "./components/movie/presentationMovie";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   const [data, setData] = useState(moviesData);
