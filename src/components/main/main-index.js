@@ -6,11 +6,20 @@ import AllMovies from "./allMovies/allMovies";
 import LeastValued from "./leastValued/leastValued";
 import MostVlued from "./mostValued/mostValued";
 import SearchMovie from "./searchMovie/search";
+import { useLocation } from "react-router-dom";
 
-function Main({ data, input }) {
+function Main({ data }) {
+  const location = useLocation();
+  console.log({ location });
+  const params = new URLSearchParams(location.search);
+  // console.log(params);
+  const search = params.get("search");
+  console.log(search);
+  // console.log(params.get("search"));
+
   return (
     <main className="main">
-      {input ? <SearchMovie data={data} input={input} /> : ""}
+      <SearchMovie data={data} input={search} />
       <h1 className="title-section">Todas las películas</h1>
       <section className="movies" id="movies-container">
         <Switch>

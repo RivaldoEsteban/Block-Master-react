@@ -8,7 +8,7 @@ function Movie({ movie }) {
   //   console.log(movie.id);
   // }
   return (
-    <div className="movie" id={movie.id} onClick={dataMovie}>
+    <div className="movie" id={movie.id} onClick={dataMovie} key={movie.id}>
       <h1 className="movie-title">{movie.title}</h1>
       <img src={movie.poster_path} alt="" className="movie-image" />
       <button>

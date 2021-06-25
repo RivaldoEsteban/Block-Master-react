@@ -2,7 +2,8 @@ import React from "react";
 import Movie from "../../movie/movie";
 
 function SearchMovie({ data, input }) {
-  console.log(input);
+  // console.log(input);
+  if (!input) return null;
   const movie = data
     .filter((movie) => {
       if (movie.title.toLowerCase() == input.toLowerCase()) {
