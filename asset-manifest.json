@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Block-Master-react/static/css/main.77585114.chunk.css",
-    "main.js": "/Block-Master-react/static/js/main.50b6b66c.chunk.js",
-    "main.js.map": "/Block-Master-react/static/js/main.50b6b66c.chunk.js.map",
+    "main.js": "/Block-Master-react/static/js/main.4d8e9126.chunk.js",
+    "main.js.map": "/Block-Master-react/static/js/main.4d8e9126.chunk.js.map",
     "runtime-main.js": "/Block-Master-react/static/js/runtime-main.6edddfb9.js",
     "runtime-main.js.map": "/Block-Master-react/static/js/runtime-main.6edddfb9.js.map",
     "static/js/2.8a85f619.chunk.js": "/Block-Master-react/static/js/2.8a85f619.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.6edddfb9.js",
     "static/js/2.8a85f619.chunk.js",
     "static/css/main.77585114.chunk.css",
-    "static/js/main.50b6b66c.chunk.js"
+    "static/js/main.4d8e9126.chunk.js"
   ]
 }
