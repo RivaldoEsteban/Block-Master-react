@@ -8,8 +8,8 @@ function LeastValued({ data }) {
         return true;
       }
     })
-    .map((movie) => {
-      return <Movie movie={movie} />;
+    .map((movie, id) => {
+      return <Movie movie={movie} key={id} />;
     });
 }
 

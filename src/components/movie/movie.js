@@ -1,14 +1,8 @@
 import React from "react";
 
 function Movie({ movie }) {
-  function dataMovie() {
-    console.log(movie);
-  }
-  // function handleMovie() {
-  //   console.log(movie.id);
-  // }
   return (
-    <div className="movie" id={movie.id} onClick={dataMovie} key={movie.id}>
+    <div className="movie" id={movie.id} key={movie.id}>
       <h1 className="movie-title">{movie.title}</h1>
       <img src={movie.poster_path} alt="" className="movie-image" />
       <button>

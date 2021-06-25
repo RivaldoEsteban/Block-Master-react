@@ -12,7 +12,7 @@ function SearchMovie({ data, input }) {
     })
     .map((movie) => {
       return (
-        <div className="search-movie">
+        <div className="search-movie" key="movie.id">
           <h1 className="title-section">Película encontrada</h1>
           <Movie movie={movie} />
         </div>

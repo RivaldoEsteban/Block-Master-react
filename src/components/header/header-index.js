@@ -6,15 +6,16 @@ function Header({ setInput }) {
   const history = useHistory();
   console.log(history);
   const inputValue = useRef(null);
+
   function searchMovie(event) {
     event.preventDefault();
     setInput(inputValue.current.value);
     const search = inputValue.current.value;
     history.push({ search: `?search=${search}` });
   }
+
   const search = history.location.search;
   const params = new URLSearchParams(search);
-  // console.log(getSearch);
   const getSearch = params.get("search");
   console.log(getSearch);
 
@@ -24,21 +25,15 @@ function Header({ setInput }) {
         <img src="./images/logo.png" alt="logo de la página" />
       </Link>
       <ul className="list-a">
-        <Link to="/Block-Master-react/">
-          <li id="allMovies">
-            <a href="#">Todas</a>
-          </li>
-        </Link>
-        <Link to="/Block-Master-react/mostValued">
-          <li id="mostValued">
-            <a href="#">Más valoradas</a>
-          </li>
-        </Link>
-        <Link to="/Block-Master-react/leastValued">
-          <li id="leastValued">
-            <a href="#">Menos valoradas</a>
-          </li>
-        </Link>
+        <li id="allMovies">
+          <Link to="/Block-Master-react/">Todas</Link>
+        </li>
+        <li id="mostValued">
+          <Link to="/Block-Master-react/mostValued">Más valoradas</Link>
+        </li>
+        <li id="leastValued">
+          <Link to="/Block-Master-react/leastValued">Menos valoradas</Link>
+        </li>
       </ul>
       <form
         className="form"

@@ -11,9 +11,9 @@ function App() {
 
   return (
     <div className="wrapper">
-      <Header data={data} setInput={setInput} />
+      <Header data={data} setInput={setInput} key="header" />
       <Hero />
-      <Main data={data} input={input} />
+      <Main data={data} input={input} ke="main" />
     </div>
   );
 }
