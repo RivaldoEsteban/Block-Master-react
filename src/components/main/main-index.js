@@ -7,7 +7,7 @@ import MostVlued from "./mostValued/mostValued";
 import SearchMovie from "./searchMovie/search";
 import { useLocation } from "react-router-dom";
 
-function Main({ data, searchInput, input }) {
+function Main({ data, input }) {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const search = params.get("search");

@@ -2,21 +2,23 @@ import React, { useRef } from "react";
 import "./header-style.css";
 import { Link, useHistory } from "react-router-dom";
 
-function Header({ setInput, setSearchInput }) {
+function Header({ setInput }) {
   const history = useHistory();
   const inputValue = useRef(null);
 
-  function searchMovie(event) {
-    event.preventDefault();
+  function searchMovie() {
     setInput(inputValue.current.value);
     const search = inputValue.current.value;
     history.push({ search: `?search=${search}` });
   }
 
+  function handleSubmitForm(event) {
+    event.preventDefault();
+  }
+
   const search = history.location.search;
   const params = new URLSearchParams(search);
   const getSearch = params.get("search");
-  console.log(getSearch);
 
   return (
     <header className="header">
@@ -38,13 +40,13 @@ function Header({ setInput, setSearchInput }) {
         className="form"
         id="form"
         aria-label="formulario-header"
-        onChange={searchMovie}
+        onSubmit={handleSubmitForm}
       >
         <input
           type="text"
           ref={inputValue}
           defaultValue={getSearch}
-          // onChange={searchMovie.valueInput}
+          onChange={searchMovie}
         />
         <img
           className="search"
