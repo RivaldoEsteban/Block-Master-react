@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import "./hero-style.css";
 
 function Hero() {
@@ -21,24 +21,24 @@ function Hero() {
 
   function mulan() {
     image.current.src = `images/mulan.png`;
-    removeClass();
-    image.current.classList.add("mulan");
+    // removeClass();
+    // image.current.classList.add("mulan");
     circleDisabled();
     button1.current.classList.add("active");
   }
 
   function raya() {
     image.current.src = `images/raya.png`;
-    removeClass();
-    image.current.classList.add("raya");
+    // removeClass();
+    // image.current.classList.add("raya");
     circleDisabled();
     button2.current.classList.add("active");
   }
 
   function unidos() {
     image.current.src = `images/unidos.png`;
-    removeClass();
-    image.current.classList.add("unidos");
+    // removeClass();
+    // image.current.classList.add("unidos");
     circleDisabled();
     button3.current.classList.add("active");
   }

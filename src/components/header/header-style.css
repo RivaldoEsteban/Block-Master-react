@@ -1,14 +1,17 @@
 .header {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  flex-wrap: wrap;
+  gap: 1rem;
   padding: 1.5rem 0;
+  justify-content: space-between;
 }
 
 .list-a {
   display: flex;
   list-style: none;
   gap: 3rem;
+  padding: 0;
 }
 
 .list-a li a {
@@ -26,14 +29,13 @@
 }
 
 .form {
-  flex: 1;
   position: relative;
   height: 44px;
   overflow: hidden;
 }
 
 .form input {
-  width: 100%;
+  width: 350px;
   box-sizing: border-box;
   height: inherit;
   padding: 0 72px 0 1rem;
@@ -50,4 +52,17 @@
   background-color: #fed941;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .header {
+    text-align: center;
+    gap: 1rem;
+  }
+  .form {
+    width: 100%;
+  }
+  .form input {
+    width: 100%;
+  }
 }

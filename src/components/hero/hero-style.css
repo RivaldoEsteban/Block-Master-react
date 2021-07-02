@@ -7,15 +7,7 @@
   width: 100%;
   object-fit: cover;
   border-radius: 1rem;
-  /* animation-name: mulan;
-  animation-duration: 300ms; */
 }
-
-/* .hero-img {
-  width: 100%;
-  animation-name: mulan;
-  animation-duration: 300ms;
-} */
 
 .mulan {
   animation-name: mulan;
@@ -142,4 +134,11 @@
 .movie button p {
   margin: 0;
   font: 700 normal 28px/35px var(--fontFamily);
+}
+
+@media (max-width: 500px) {
+  .hero img {
+    height: 230px;
+    /* object-fit: cover; */
+  }
 }
