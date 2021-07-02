@@ -8,12 +8,18 @@ import moviesData from "./movies-data";
 function App() {
   const [data, setData] = useState(moviesData);
   const [input, setInput] = useState("");
+  const [searchInput, setSearchInput] = useState("");
 
   return (
     <div className="wrapper">
-      <Header data={data} setInput={setInput} key="header" />
+      <Header
+        data={data}
+        setInput={setInput}
+        key="header"
+        setSearchInput={setSearchInput}
+      />
       <Hero />
-      <Main data={data} input={input} ke="main" />
+      <Main data={data} input={input} ke="main" searchInput={searchInput} />
     </div>
   );
 }

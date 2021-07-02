@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./main-style.css";
 import { Switch, Route } from "react-router-dom";
 import AllMovies from "./allMovies/allMovies";
@@ -7,19 +7,24 @@ import MostVlued from "./mostValued/mostValued";
 import SearchMovie from "./searchMovie/search";
 import { useLocation } from "react-router-dom";
 
-function Main({ data }) {
+function Main({ data, searchInput, input }) {
   const location = useLocation();
-  console.log({ location });
-
   const params = new URLSearchParams(location.search);
-  // console.log(params);
   const search = params.get("search");
-  console.log(search);
-  // console.log(params.get("search"));
-
+  console.log(input.length);
   return (
     <main className="main">
-      <SearchMovie data={data} input={search} key="search-movie" />
+      {input.length >= 1 ? (
+        <div>
+          <h1>Películas Encontradas</h1>
+          <div className="search-movie">
+            <SearchMovie data={data} input={search} key="search-movie" />
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
+
       <h1 className="title-section">Todas las películas</h1>
       <section className="movies" id="movies-container">
         <Switch>

@@ -29,6 +29,7 @@
   flex: 1;
   position: relative;
   height: 44px;
+  overflow: hidden;
 }
 
 .form input {
@@ -38,21 +39,15 @@
   padding: 0 72px 0 1rem;
   border-radius: 0.5rem;
   border: none;
+  overflow: hidden;
+  outline: none;
 }
 
-.form button {
+.search {
   position: absolute;
   right: 0;
-  top: 0;
-  background: #fed941;
-  height: inherit;
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  border: none;
-  cursor: pointer;
-}
-
-.form button img {
-  width: 1.5rem;
-  padding: 10px 1.2rem;
+  padding: 10px;
+  background-color: #fed941;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }

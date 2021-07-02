@@ -2,9 +2,8 @@ import React, { useRef } from "react";
 import "./header-style.css";
 import { Link, useHistory } from "react-router-dom";
 
-function Header({ setInput }) {
+function Header({ setInput, setSearchInput }) {
   const history = useHistory();
-  console.log(history);
   const inputValue = useRef(null);
 
   function searchMovie(event) {
@@ -39,12 +38,19 @@ function Header({ setInput }) {
         className="form"
         id="form"
         aria-label="formulario-header"
-        onSubmit={searchMovie}
+        onChange={searchMovie}
       >
-        <input type="text" ref={inputValue} defaultValue={getSearch} />
-        <button type="submit" role="button">
-          <img src="./images/icons/search.png" alt="icono del buscador" />
-        </button>
+        <input
+          type="text"
+          ref={inputValue}
+          defaultValue={getSearch}
+          // onChange={searchMovie.valueInput}
+        />
+        <img
+          className="search"
+          src="./images/icons/search.png"
+          alt="icono del buscador"
+        />
       </form>
     </header>
   );

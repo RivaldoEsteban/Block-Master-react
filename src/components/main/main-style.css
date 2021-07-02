@@ -62,5 +62,8 @@
 }
 
 .search-movie {
-  margin-bottom: 50px;
+  margin: 50px 0;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
