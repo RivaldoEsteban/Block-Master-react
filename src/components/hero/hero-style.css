@@ -138,7 +138,7 @@
 
 @media (max-width: 500px) {
   .hero img {
-    height: 230px;
+    height: 180px;
     /* object-fit: cover; */
   }
 }
