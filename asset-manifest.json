@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Block-Master-react/static/css/main.12c11ef5.chunk.css",
+    "main.css": "/Block-Master-react/static/css/main.1d500c64.chunk.css",
     "main.js": "/Block-Master-react/static/js/main.00b1e25d.chunk.js",
     "main.js.map": "/Block-Master-react/static/js/main.00b1e25d.chunk.js.map",
     "runtime-main.js": "/Block-Master-react/static/js/runtime-main.6edddfb9.js",
@@ -10,13 +10,13 @@
     "static/js/3.d5bf3fa7.chunk.js": "/Block-Master-react/static/js/3.d5bf3fa7.chunk.js",
     "static/js/3.d5bf3fa7.chunk.js.map": "/Block-Master-react/static/js/3.d5bf3fa7.chunk.js.map",
     "index.html": "/Block-Master-react/index.html",
-    "static/css/main.12c11ef5.chunk.css.map": "/Block-Master-react/static/css/main.12c11ef5.chunk.css.map",
+    "static/css/main.1d500c64.chunk.css.map": "/Block-Master-react/static/css/main.1d500c64.chunk.css.map",
     "static/js/2.2ae31718.chunk.js.LICENSE.txt": "/Block-Master-react/static/js/2.2ae31718.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6edddfb9.js",
     "static/js/2.2ae31718.chunk.js",
-    "static/css/main.12c11ef5.chunk.css",
+    "static/css/main.1d500c64.chunk.css",
     "static/js/main.00b1e25d.chunk.js"
   ]
 }
